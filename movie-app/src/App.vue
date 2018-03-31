@@ -66,10 +66,11 @@ export default {
         })
     },
     searchForMovies(subject) {
-      const API_URL = `http://www.omdbapi.com/?&apikey=47ee5f53&s=${subject}`
+      const API_URL = `https://www.omdbapi.com/?&apikey=47ee5f53&s=${subject}`
       fetch(API_URL)
           .then(res => res.json())
           .then(result => {
+              console.log(result)
               this.movies = result.Search
           })
       },

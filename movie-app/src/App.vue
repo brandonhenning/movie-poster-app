@@ -53,7 +53,6 @@ export default {
   methods: {
     addMovie(movie) {
         this.favorites.push(movie)
-        console.log(this.favorites)
     },
     getOpinion() {
       const URL = '../static/opinions.json'
@@ -70,7 +69,6 @@ export default {
       fetch(API_URL)
           .then(res => res.json())
           .then(result => {
-              console.log(result)
               this.movies = result.Search
           })
       },
